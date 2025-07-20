@@ -9,14 +9,14 @@ print("\nReminder:", end=" ")
 match priority:
     case "high":
         if time_bound == "yes":
-            print(f"'{task}' is a high priority task that requires immediate attention today!")
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
         else:
-            print(f"'{task}' is a high priority task. You should focus on this soon.")
+            print(f"Reminder: '{task}' is a high priority task. You should focus on this soon.")
     case "medium":
         if time_bound == "yes":
-            print(f"'{task}' is a medium priority task that should be completed soon!")
+            print(f"Reminder: '{task}' is a medium priority task that should be completed soon!")
         else:
-            print(f"'{task}' is a medium priority task. Consider completing it this week.")
+            print(f"Reminder: '{task}' is a medium priority task. Consider completing it this week.")
     case "low":
         if time_bound == "yes":
             print(f"Note: '{task}' is a low priority task but has a deadline. Try to schedule it.")
