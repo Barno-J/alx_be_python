@@ -6,35 +6,27 @@ def display_menu():
     print("4. Exit")
 
 def main():
-    shopping_list = []  
-
+    shopping_list = []
     while True:
-        display_menu()  
-
+        display_menu()
         try:
             choice = int(input("Enter your choice (1-4): "))  
         except ValueError:
-            print("Please enter a valid number.")
+            print("Invalid input. Please enter a number.")
             continue
-
-        if not choice.isdigit():
-            print("Please enter a number (1-4).")
-            continue
-
-        choice = int(choice)
 
         if choice == 1:
-            item = input("Enter item to add: ").strip()
+            item = input("Enter item to add: ")
             shopping_list.append(item)
-            print(f"'{item}' added to the list.")
-
+            print(f"{item} added to shopping list.")
+            
         elif choice == 2:
-            item = input("Enter item to remove: ").strip()
+            item = input("Enter item to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
-                print(f"'{item}' removed from the list.")
+                print(f"{item} removed from shopping list.")
             else:
-                print(f"'{item}' not found in the shopping list.")
+                print(f"{item} not found in shopping list.")
 
         elif choice == 3:
             if shopping_list:
@@ -51,7 +43,8 @@ def main():
             break
 
         else:
-            print("Invalid choice. Please select a number from 1 to 4.")
+            print("Invalid choice. Please select between 1 and 4.")
 
 if __name__ == "__main__":
     main()
+
