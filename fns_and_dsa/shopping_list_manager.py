@@ -11,7 +11,7 @@ def main():
     while True:
         display_menu()  
 
-        choice = input("Enter your choice (1-4): ").strip()
+        choice = int(input("Enter your choice (1-4): ").strip())
 
         if not choice.isdigit():
             print("Please enter a number (1-4).")
