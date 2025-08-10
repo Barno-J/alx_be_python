@@ -25,12 +25,15 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            if type(book) is EBook:
-                print("EBook: {} by {}, File Size: {}KB".format(book.title, book.author, book.file_size))
-            elif type(book) is PrintBook:
-                print("PrintBook: {} by {}, Page Count: {}".format(book.title, book.author, book.page_count))
-            elif type(book) is Book:
+            if isinstance(book, EBook):
+                print("EBook: {} by {}, File Size: {}KB".format(
+                    book.title, book.author, book.file_size))
+            elif isinstance(book, PrintBook):
+                print("PrintBook: {} by {}, Page Count: {}".format(
+                    book.title, book.author, book.page_count))
+            elif isinstance(book, Book):
                 print("Book: {} by {}".format(book.title, book.author))
+
 
 
 
